@@ -1,0 +1,28 @@
+.NavBar {
+    height: 5rem;
+    width: 100vmax;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem - 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.logo {
+    object-fit: cover;
+    height: 10rem;
+    width: 15rem;
+}
+.desktopMenuListItem{
+    margin: 3rem;
+    cursor: pointer;
+}
+.desktopMenuListItem:hover {
+    color: aqua;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid aqua;
+}
