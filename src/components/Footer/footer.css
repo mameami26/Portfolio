@@ -1,0 +1,17 @@
+.footerSection {
+    padding: 2rem;
+    background: black;
+    text-align: center;
+    color: white;
+  }
+  
+  .footerSection a {
+    margin: 0 1rem;
+    color: white;
+  }
+  
+  .footerSection a:hover {
+    color: aqua;
+    border-bottom: 3px solid aqua;
+  }
+  

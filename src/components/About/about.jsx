@@ -28,7 +28,7 @@ const About = () => {
           possibilities that come with it.
         </span>
       </div>
-      <img src="./81787c2a-fcf9-4daa-b0c8-346cc2986b06.jpg" alt="Profile" className="image"/>
+      <img src="" alt="Profile" className="image"/>
     </section>
   );
 };

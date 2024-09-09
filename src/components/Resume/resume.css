@@ -1,0 +1,25 @@
+.resumeSection {
+    padding: 4rem;
+    background: black;
+    color: white;
+  }
+  
+  .downloadResume {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background: aqua;
+    color: black;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .proficiencyList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .proficiencyList li {
+    padding: 0.5rem 0;
+  }
+  
