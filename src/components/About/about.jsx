@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.css";
+import image from './Aminata.jpg';
 
 const About = () => {
   return (
@@ -28,7 +29,7 @@ const About = () => {
           possibilities that come with it.
         </span>
       </div>
-      <img src="" alt="Profile" className="image"/>
+     <div className="photo"><img src={image} alt="Profile" className="image"/></div>
     </section>
   );
 };

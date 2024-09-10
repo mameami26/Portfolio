@@ -1,18 +1,16 @@
 #about{
 height: calc(100vh - 4rem);
 width: 100vw;
-max-width: 75rem;
 margin: o auto;
 overflow: hidden;
 position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .image{
-    position: absolute;
-    z-index: -1;
-    top: -4rem;
-    right: 0;
-    object-fit: cover;
-    height: 100vh;
+    height: 500px;
+    width: 500px;
 }
 .introContent{
     height: 100vh;
@@ -34,5 +32,10 @@ position: relative;
 .aboutMe{
     font-size: 1.5rem;
     font-weight: 100;
+
+}
+.photo{
+    display: flex;
+    justify-content: center;
 
 }

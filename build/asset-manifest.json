@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc414e96.css",
-    "main.js": "/static/js/main.6015b315.js",
+    "main.css": "/static/css/main.c2e90013.css",
+    "main.js": "/static/js/main.117baf2d.js",
+    "static/media/surveyApp.png": "/static/media/surveyApp.b684f5908b30971f835c.png",
+    "static/media/Aminata.jpg": "/static/media/Aminata.b0a3f8b6a1c72b8a6c64.jpg",
     "index.html": "/index.html",
-    "main.cc414e96.css.map": "/static/css/main.cc414e96.css.map",
-    "main.6015b315.js.map": "/static/js/main.6015b315.js.map"
+    "main.c2e90013.css.map": "/static/css/main.c2e90013.css.map",
+    "main.117baf2d.js.map": "/static/js/main.117baf2d.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc414e96.css",
-    "static/js/main.6015b315.js"
+    "static/css/main.c2e90013.css",
+    "static/js/main.117baf2d.js"
   ]
 }

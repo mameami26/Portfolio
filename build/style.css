@@ -6,7 +6,7 @@
     background-color: transparent;
 }
 body{
-    background: rgb(0, 0, 0);
+    background: black;
     color: white;
     overflow: hidden;
     overflow-y: scroll;
