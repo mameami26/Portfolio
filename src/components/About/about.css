@@ -1,41 +1,101 @@
-#about{
-height: calc(100vh - 4rem);
-width: 100vw;
-margin: o auto;
-overflow: hidden;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.image{
+/* Styles for larger screens (computers) */
+#about {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image {
     height: 500px;
     width: 500px;
-}
-.introContent{
+  }
+  
+  .introContent {
     height: 100vh;
     width: 100vh;
     padding: 2rem;
     font-size: 3rem;
     font-weight: 700;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.hello{
+  }
+  
+  .hello {
     font-size: 1.75rem;
     font-weight: 100;
-}
-.intoText{
+  }
+  
+  .intoText {
     color: aqua;
-}
-.aboutMe{
+  }
+  
+  .aboutMe {
     font-size: 1.5rem;
     font-weight: 100;
-
-}
-.photo{
+  }
+  
+  .photo {
     display: flex;
     justify-content: center;
-
-}
+  }
+  
+  /* Responsive Styles for Tablets (max-width: 768px) */
+  @media (max-width: 768px) {
+    #about {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      padding: 2rem;
+    }
+  
+    .introContent {
+      height: auto;
+      width: auto;
+      padding: 1.5rem;
+    }
+  
+    .image {
+      height: 80%;
+      width: 80%;
+      max-width: 300px;
+    }
+  
+    .introContent {
+      font-size: 2rem;
+    }
+  
+    .aboutMe {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+  }
+  
+  /* Responsive Styles for Phones (max-width: 480px) */
+  @media (max-width: 480px) {
+    #about {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .introContent {
+      font-size: 1.75rem;
+    }
+  
+    .aboutMe {
+      font-size: 1rem;
+    }
+  
+    .image {
+      width: 90%;
+      max-width: 300px;
+      height: auto;
+    }
+  }
+  

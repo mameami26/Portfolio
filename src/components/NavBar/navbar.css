@@ -1,29 +1,122 @@
+/* Basic NavBar Styles */
 .NavBar {
     height: 5rem;
-    width: 100vmax;
-    max-width: 75rem;
-    margin: 0 auto;
-    padding: 1rem - 2rem;
+    width: 100%;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
-    z-index: 3;
-}
-
-.logo {
-    object-fit: cover;
-    height: 10rem;
-    width: 15rem;
-    background: transparent;
-}
-.desktopMenuListItem{
-    margin: 3rem;
+    z-index: 100;
+    background-color: rgba(112, 127, 134, 0.6); /* Semi-transparent */
+    transition: background-color 0.3s ease, padding 0.3s ease;
+  }
+  
+  .NavBar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem 2rem; /* Slightly smaller padding when scrolled */
+  }
+  
+  .logo {
+    height: 5rem;
+    width: auto;
+    transition: height 0.3s ease;
+  }
+  
+  .NavBar.scrolled .logo {
+    height: 3rem; /* Shrinks logo on scroll */
+  }
+  
+  .desktopMenu {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .desktopMenuListItem {
+    margin: 0 1rem;
     cursor: pointer;
-}
-.desktopMenuListItem:hover {
+    color: white;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  .desktopMenuListItem:hover {
     color: aqua;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid aqua;
-}
+    border-bottom: 2px solid aqua;
+  }
+  
+  /* Hamburger Menu Icon */
+  .menuIcon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .menuIcon .bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    margin: 0.3rem 0;
+    transition: all 0.3s ease;
+  }
+  
+  .menuIcon.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menuIcon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menuIcon.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .desktopMenu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 99;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
+    .desktopMenu.active {
+      display: flex;
+    }
+  
+    .menuIcon {
+      display: flex;
+    }
+  
+    .desktopMenuListItem {
+      margin: 1rem 0;
+      font-size: 1.25rem;
+    }
+  }
+  
+  /* Smooth collapse for desktop to mobile view */
+  @media (max-width: 480px) {
+    .NavBar {
+      flex-direction: column;
+    }
+  
+    .logo {
+      height: 3rem;
+    }
+  
+    .desktopMenuListItem {
+      margin: 0.5rem 0;
+    }
+  }
+  
