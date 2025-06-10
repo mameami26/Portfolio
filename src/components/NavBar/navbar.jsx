@@ -28,11 +28,15 @@ const NavBar = () => {
 
   return (
     <nav className={`NavBar ${scrolled ? "scrolled" : ""}`}>
-      <img
-        src="./Screenshot_8-9-2024_133625_www.brandcrowd.com.jpeg"
-        alt="logo"
-        className="logo"
-      />
+
+<aside>
+      <div className="logo">
+        <Link to="home" smooth={true} duration={500}>
+          <h1>A.S</h1>
+        </Link>
+      </div>
+</aside>
+      
 
       <div className={`menuIcon ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
         <div className="bar"></div>
@@ -41,20 +45,27 @@ const NavBar = () => {
       </div>
 
       <div className={`desktopMenu ${menuOpen ? "active" : ""}`}>
-        <Link to="about" smooth={true} duration={500} className="desktopMenuListItem">
-          About Me
+        <Link to="home" smooth={true} duration={500} className="desktopMenuListItem">
+          Home
         </Link>
-        <Link to="portfolio" smooth={true} duration={500} className="desktopMenuListItem">
+        <Link to="about" smooth={true} duration={500} className="desktopMenuListItem">
+          About
+        </Link>
+        <Link to="service" smooth={true} duration={500} className="desktopMenuListItem">
+          Service
+        </Link>
+         <Link to="portfolio" smooth={true} duration={500} className="desktopMenuListItem">
           Portfolio
         </Link>
-        <Link to="contact" smooth={true} duration={500} className="desktopMenuListItem">
-          Contact Me
+        <Link to="blog" smooth={true} duration={500} className="desktopMenuListItem">
+          Blog
         </Link>
-        <Link to="resume" smooth={true} duration={500} className="desktopMenuListItem">
-          Resume
+        <Link to="contact" smooth={true} duration={500} className="desktopMenuListItem">
+          Contact
         </Link>
       </div>
     </nav>
+    
   );
 };
 

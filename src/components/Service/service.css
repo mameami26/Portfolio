@@ -1,0 +1,59 @@
+/* src/components/Service/service.css */
+
+.service-section {
+  padding: 60px 20px;
+  background-color: #f0f8ff;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.service-card {
+  background-color: #a2e3f7;
+  width: 230px;
+  padding: 25px 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}

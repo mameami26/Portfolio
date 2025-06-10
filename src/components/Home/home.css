@@ -1,0 +1,96 @@
+
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 20px;
+  gap: 40px;
+  background-color: #f0f8ff;
+  flex-wrap: wrap;
+}
+
+.introImage {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+}
+
+.introImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+.introImage::before,
+.introImage::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.introImage::before {
+  width: 250px;
+  height: 250px;
+  background-color: #cce7ff;
+  top: -20px;
+  left: -20px;
+  animation: float1 6s ease-in-out infinite;
+}
+
+.introImage::after {
+  width: 100px;
+  height: 100px;
+  background-color: #a0d8ff;
+  bottom: -15px;
+  right: -15px;
+  animation: float2 4s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.introContent {
+  max-width: 500px;
+  text-align: left;
+}
+
+.hello {
+  font-size: 2rem;
+  color: #333;
+}
+
+.aboutMe {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 15px;
+}
+
+.start-button button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.start-button button:hover {
+  background-color: #3b9840;
+}

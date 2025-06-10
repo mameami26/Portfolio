@@ -1,65 +1,55 @@
-import React, { useState } from "react";
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import "./contact.css";
 
-const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [errors, setErrors] = useState({});
 
-  const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    return regex.test(email);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newErrors = {};
-
-    if (!form.name) newErrors.name = "Name is required";
-    if (!form.email || !validateEmail(form.email))
-      newErrors.email = "Valid email is required";
-    if (!form.message) newErrors.message = "Message is required";
-
-    setErrors(newErrors);
-
-    if (Object.keys(newErrors).length === 0) {
-      // Form is valid, submit it
-      console.log("Form submitted:", form);
-    }
-  };
-
+function ContactForm() {
+  const [state, handleSubmit] = useForm("mjkrypyr");
+  if (state.succeeded) {
+      return <p>Thanks for contacting would get back to you as soon as possible</p>;
+  }
   return (
-    <section id="contact" className="contactSection">
-      <form className="contactForm" onSubmit={handleSubmit}>
-        <div className="formGroup">
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-          />
-          {errors.name && <p className="error">{errors.name}</p>}
-        </div>
-        <div className="formGroup">
-          <input
-            type="email"
-            placeholder="Your Email"
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-          />
-          {errors.email && <p className="error">{errors.email}</p>}
-        </div>
-        <div className="formGroup">
-          <textarea
-            placeholder="Your Message"
-            value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
-          ></textarea>
-          {errors.message && <p className="error">{errors.message}</p>}
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="email">
+        Email Address
+      </label>
+      <input
+        id="email"
+        type="email" 
+        name="email"
+        placeholder="Your Email"
+      />
+      <input type="Name"
+      id='name'
+      name="name"
+      placeholder="Your Name"
+      />
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Your Message"
+      />
+      <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
+      <button type="submit" disabled={state.submitting}>
+        Submit
+      </button>
+    </form>
   );
-};
+}
 
-export default Contact;
+function App() {
+  return (
+    <ContactForm />
+  );
+}
+
+export default App;

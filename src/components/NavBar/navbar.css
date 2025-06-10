@@ -9,23 +9,13 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: rgba(112, 127, 134, 0.6); /* Semi-transparent */
+    background-color: rgb(251, 254, 254); /* Semi-transparent */
     transition: background-color 0.3s ease, padding 0.3s ease;
   }
   
   .NavBar.scrolled {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(248, 245, 245);
     padding: 0.5rem 2rem; /* Slightly smaller padding when scrolled */
-  }
-  
-  .logo {
-    height: 5rem;
-    width: auto;
-    transition: height 0.3s ease;
-  }
-  
-  .NavBar.scrolled .logo {
-    height: 3rem; /* Shrinks logo on scroll */
   }
   
   .desktopMenu {
@@ -37,7 +27,7 @@
   .desktopMenuListItem {
     margin: 0 1rem;
     cursor: pointer;
-    color: white;
+    color: rgb(7, 5, 5);
     transition: color 0.3s ease, border-bottom 0.3s ease;
   }
   
@@ -111,12 +101,13 @@
       flex-direction: column;
     }
   
-    .logo {
-      height: 3rem;
-    }
-  
     .desktopMenuListItem {
       margin: 0.5rem 0;
     }
   }
-  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(7, 5, 5);
+    text-decoration: none;
+  }

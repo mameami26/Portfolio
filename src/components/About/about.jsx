@@ -1,35 +1,50 @@
-import React from "react";
-import "./about.css";
-import image from './Aminata.jpg';
+import React from 'react';
+import './about.css';
+import profilePic from './about1.png'; 
 
 const About = () => {
   return (
-    <section id="about">
-      <div className="introContent">
-        <span className="hello">Hello,</span>
-        <span className="intoText">
-          I am Aminata Sall <br /> Aspiring Full-Stack Developer | Mentor |
-          Lifelong Learner
-        </span>
-        <br/>
-        <span className="aboutMe">
-          I’m Aminata Sall, but most of my friends call me Amina. My journey
-          into the tech world was sparked by a natural curiosity and desire to
-          understand the world around me. This drive led me to pursue a career
-          in technology, where I’m constantly learning and evolving. Currently,
-          I’m working as a mentor at the DOE School through the LYFE program,
-          supporting parent students in achieving their academic goals. It’s a
-          role that allows me to not only give back to the community but also
-          refine my leadership and problem-solving skills. My ambition is to
-          become one of the world’s leading full-stack developers, and I am
-          committed to continuously learning and expanding my technical
-          expertise to make that dream a reality. For me, the key to success is
-          hard work, dedication, and the belief that we can achieve anything we
-          set our minds to. I'm excited about the future and the endless
-          possibilities that come with it.
-        </span>
+    <section className="about-section" id="about">
+      <div className="about-container">
+
+        {/* Right-side image with dynamic shapes */}
+        <div className="about-image-wrapper">
+          <div className="bg-shape bg1"></div>
+          <div className="bg-shape bg2"></div>
+          <img src={profilePic} alt="Aminata Sall" className="about-image" />
+        </div>
+
+        {/* Left-side content */}
+        <div className="about-text">
+          <h2>About Me</h2>
+          <p>
+            I’m <strong>Aminata Sall</strong>, a Full Stack Developer and customer servivice representative, with hands-on experience building
+            web and mobile apps using the MERN stack. From designing food ordering platforms like Neex Nday Jor to 
+            developing tech solutions for student engagement, I enjoy solving real-world problems through code.
+          </p>
+          <p>
+            I’ve completed a Full Stack Certificate at Columbia University and I have finishing my Associate Degree in 
+            Computer Science at Hostos Community College. I speak English, French, and Wolof, and I’m driven by a passion 
+            for accessible, inclusive tech.
+          </p>
+
+          <div className="education">
+            <h3>🎓 Education</h3>
+            <ul>
+              <li><strong>Hostos Community College (CUNY)</strong> — A.S. in Computer Science (2025)</li>
+              <li><strong>Columbia University</strong> — Full Stack Certificate (2024)</li>
+              <li><strong>Manhattan Comprehensive High School</strong> High School Diploma (2023)</li>
+            </ul>
+          </div>
+           <a 
+            href="https://docs.google.com/document/d/1KtYBwKi81j6KRwXN2q_XZPY84z41Qs3t1fTOpJ2yB4M/edit?usp=sharing" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <button className="download-btn">View Resume</button>
+          </a>
+        </div>
       </div>
-     <div className="photo"><img src={image} alt="Profile" className="image"/></div>
     </section>
   );
 };
