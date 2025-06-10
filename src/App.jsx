@@ -3,7 +3,6 @@ import Home from "./components/Home/home";
 import About from "./components/About/about";
 import Service from "./components/Service/service";
 import Portfolio from "./components/Portfolio/portfolio"; 
-import Blog from "./components/Blog/blog";
 import Contact from  "./components/Contact/contact";
 
 
@@ -15,7 +14,6 @@ function App() {
       <About/>
       <Service/>
       <Portfolio/>
-      <Blog/>
       <Contact/>
     </div>
   );
